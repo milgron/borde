@@ -1,0 +1,90 @@
+.borde {
+  border: 1px solid red;
+  transition: all 500ms ease-in-out;
+}
+
+.menu-open-button {
+  width: 15px;
+  height: 15px;
+  background: red;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+
+  &.hide {
+    transform: translateY(50%);
+    cursor:  unset;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+  }
+}
+
+.menu-close-button {
+  width: 15px;
+  height: 15px;
+  background: red;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+
+  &.hide {
+    transform: translateY(-50%);
+    cursor:  unset;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+  }
+}
+
+.menu-panel-wrapper {
+  width: 300px;
+  box-shadow: 5px 5px 5px rgba($color: #ddd, $alpha: .75);
+  border: 1px solid rgb(182, 182, 182);
+  background: rgba(255, 255, 255, 1.0);
+  padding: 10px;
+  position: absolute; 
+  left: 10px;
+  top: 10px;
+  bottom: 10px;
+  transition: all 500ms ease-in-out;
+  overflow: hidden;
+  display: flex;
+  
+  &.hide {
+    transform: translatex(-50%);
+    cursor: unset;
+    opacity: 0;
+    transition: all 500ms ease-in-out;
+  }
+
+  &.low-opacity {
+    opacity: 0.15;
+  }
+}
+
+.menu-panel-elements-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: none;
+}
+
+.element-in-panel-wrapper {
+  z-index: 10;
+  pointer-events: auto;
+  border: 1px solid rgb(182, 182, 182);
+  padding: 10px;
+  margin: 5px 0;
+  cursor: pointer;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    background: #6a6a6a;
+    color: #fff;
+    transition: all 250ms ease-in-out;
+  }
+}
+
